@@ -2,13 +2,14 @@
 body{
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  height: 100vh;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 main{
-  margin: 64px auto;
+  margin: 35px auto;
   width: 625px;
 }
 
@@ -66,13 +67,11 @@ span, a{
 
 ul{
   display: flex;
-  justify-content: center;
+  gap: 42px;
+  justify-content:center;
   list-style: none;
-  margin-bottom: 40px;
-}
-
-li + li{
-  margin-left: 42px;
+  margin: 0 auto 20px;
+  padding: 0;
 }
 
 a{
