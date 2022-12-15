@@ -1,18 +1,18 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body, input, button, select, textarea{
+body, input, select, textarea {
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   background: #E5E5E5;
 }
 
-body::before{
+body::before {
   background: #121214;
   content: '';
   height: 368px;
@@ -23,83 +23,188 @@ body::before{
   z-index: -1;
 }
 
-.page{
+.page {
+  margin: auto;
   width: 736px;
-  margin: 0 auto;
 }
 
-header{
+header {
   margin-top: 74px;
   width: 319px;
 }
 
-header h1{
+header h1 {
   color: white;
   font-family: 'Archivo', sans-serif;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 42px;
   margin-bottom: 24px;
 }
 
-header p{
+
+header p {
   color: #42D3FF;
   font-size: 16px;
   line-height: 26px;
 }
 
-form{
+
+form {
   background: #FAFAFC;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   margin-top: 38px;
   min-height: 300px;
   padding: 64px;
 }
 
-fieldset{
+
+
+fieldset {
   border: none;
 }
 
-.fildset-wrapper{
+.fieldset-wrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.fieldset-wrapper legend{
+fieldset legend {
   border-bottom: 1px solid #E6E6F0;
   font-family: 'Archivo', sans-serif;
-  font-size: 24px;
   font-weight: 600;
+  font-size: 24px;
   line-height: 34px;
   padding-bottom: 16px;
+  width: 100%;
 }
-
-.input-wrapper{
+ 
+.input-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.input-wrapper label{
+.input-wrapper label,
+.checkbox-wrapper label {
+  color: #4E4958;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 8px;
 }
 
-.input-wrapper label span{
-  color: #C1BCCC;
+.input-wrapper label span {
+  color: #a9a7af;
   font-size: 12px;
-  line-height: 2px;
+  line-height: 20px;
   margin-left: 12px;
 }
 
-.input-wrapper input{
+.input-wrapper label span:hover {
+  color: #6c6a71;
+}
+
+.input-wrapper input, 
+.input-wrapper textarea,
+.input-wrapper select {
   background: #FAFAFC;
   border: 1px solid #E6E6F0;
   border-radius: 8px;
-  color: #C1BCCC;
+  color: #6c6a71;
   font-size: 16px;
   height: 56px;
   line-height: 26px;
   padding: 0 24px;
+}
+
+.input-wrapper textarea {
+  height: 168px;
+  padding: 0;
+}
+
+.input-wrapper select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: right 24px top 50%;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+}
+
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  align-items: center;
+  display:flex;
+  gap: 16px;
+  margin: 0;
+}
+
+.checkbox-wrapper input {
+  height: 24px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width: 24px;
+}
+
+.checkbox-wrapper label::before {
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  content: '';
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.0002 6.99984L19.5902 5.58984L9.00016 16.1698Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+input:invalid{
+  border: 2px solid #FF1010;
+}
+
+footer{
+  background: #F0F0FA;
+  border-radius: 0px 0px 8px 8px;
+  border-top: 1px solid #D6D6D6;
+  display: flex;
+  flex-direction: column;
+  height: 136px;
+  padding: 40px 64px;
+}
+
+footer .button{
+  background: #04D361;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 56px;
+  line-height: 26px;
+}
+
+footer .button:hover{
+  background: #08A04C;
 }
