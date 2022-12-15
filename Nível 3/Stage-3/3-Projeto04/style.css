@@ -1,0 +1,106 @@
+/* 
+ Todas as propriedades CSS estão em ordem alfabetica
+ All CSS properties are in alphabetical order
+*/
+
+:root{
+  font-size: 62.5%;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: rgb(236, 233, 253);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.6rem;
+  padding: 6rem 2.3rem 6.3rem;
+}
+
+main{
+  margin: 0 auto;
+  max-width: 33rem;
+}
+
+main p:first-child{
+  color: rgb(113, 88, 239);
+  letter-spacing: 3px;
+  line-height: 3.2rem;
+  margin-bottom: 1.7rem;
+  text-transform: uppercase;
+}
+
+h1{
+  color: rgb(9, 0, 57);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4.8rem;
+  margin-bottom: 1.5rem;
+}
+
+h1 + p{
+  color: rgba(10, 0, 57, .64);
+  line-height: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+a{
+  color: rgb(9, 0, 57);
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgb(113, 88, 239);
+  font-weight: 800;
+}
+
+ul{
+  list-style: none;
+  margin-top: 7.2rem;
+}
+
+ul li{
+  display: flex;
+  color: rgb(9, 0, 57);
+  font-size: 2.4rem;
+  font-weight: 800;
+  gap: 3.8rem;
+  line-height: 3.2rem;
+  max-width: 25.7rem;
+}
+
+ul li + li{
+  margin-top: 3.2rem;
+}
+
+ul li span{
+  font-size: 7.2rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 8rem;
+}
+
+/* media queries */
+
+@media(min-width: 700px){
+  body{
+    padding-top: 8rem;
+  }
+
+  main{
+    display: flex;
+    gap: 10rem;
+    max-width: 1020;
+  }
+
+  main > div{
+    max-width: 485px;
+  }
+  ul li{
+    align-items: center;
+    max-width: 450px;
+  }
+}
